@@ -1,25 +1,89 @@
+img {
+  width: 100%;
+  height: auto;
+}
+
+:root {
+  --background-color: #f1f1f1;
+  --text-color: #333;
+  --link-color: #007bff;
+  --link-hover-color: #0056b3;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
 }
-header,
-footer {
-  background-color: #f1f1f1;
+
+header, footer {
+  background-color: var(--background-color);
   text-align: center;
-  padding: 1em;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
 nav ul {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  gap: 20px; /* Add space between links */
 }
+
 nav ul li {
-  display: inline;
-  margin: 0 10px;
+  margin: 0;
 }
+
 nav ul li a {
   text-decoration: none;
-  color: #000;
+  color: var(--link-color);
+  transition: color 0.3s ease-in-out;
 }
+
+nav ul li a:hover {
+  color: var(--link-hover-color);
+}
+
 footer {
   font-size: 0.8em;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stack the navigation items vertically on smaller screens */
+    gap: 10px;
+  }
+}
+
+html, body {
+  height: 100%; /* Make sure the full height of the browser window is available */
+}
+
+body {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+}
+
+.content-wrap {
+  flex: 1 0 auto; /* This will make the content expand to fill the available space, pushing the footer down */
+  /* Include your other styles for the main content area, if any */
+}
+
+footer {
+  flex-shrink: 0; /* Prevent the footer from shrinking */
+  /* Your existing footer styles */
 }
