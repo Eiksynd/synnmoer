@@ -1,1 +1,1 @@
-Ka i svarte du gjere her? E de noke du lure på? E du heilt sjuk i hauda elle?
+Ka i svarte du gjære hær? Æ dæ nåke du lure på? Æ du heilt sjuk i hauda elle?
